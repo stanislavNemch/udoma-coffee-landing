@@ -1,0 +1,230 @@
+/* ============================================================
+   Кофейня «У дома» — глобальные стили
+   Только: темы, reset, типографика, утилиты секций.
+   Стили компонентов — в их *.modules.css.
+   ============================================================ */
+
+:root {
+  --font-display: "Yeseva One", Georgia, serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+  --font-hand: "Caveat", cursive;
+
+  /* Светлая тема — «домашний день» */
+  --bg: #f6efe3;
+  --bg-soft: #eee1cb;
+  --surface: #fffaef;
+  --ink: #2a1c10;
+  --muted: #7d6c58;
+  --accent: #bc5215;
+  --accent-strong: #9a400e;
+  --accent-contrast: #fff6ea;
+  --line: rgba(42, 28, 16, 0.16);
+  --shadow: 0 22px 44px -20px rgba(74, 45, 18, 0.38);
+  --glow-1: rgba(216, 149, 62, 0.3);
+  --glow-2: rgba(188, 82, 21, 0.14);
+}
+
+[data-theme="dark"] {
+  /* Тёмная тема — «кофейня вечером» */
+  --bg: #171009;
+  --bg-soft: #1f150c;
+  --surface: #251a10;
+  --ink: #f4ead8;
+  --muted: #a6917a;
+  --accent: #e8893d;
+  --accent-strong: #f5a45c;
+  --accent-contrast: #241205;
+  --line: rgba(244, 234, 216, 0.16);
+  --shadow: 0 22px 44px -20px rgba(0, 0, 0, 0.75);
+  --glow-1: rgba(232, 137, 61, 0.16);
+  --glow-2: rgba(232, 137, 61, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px; /* отступ под фиксированную шапку */
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background-color 0.45s ease, color 0.45s ease;
+}
+
+/* Зернистость поверх всего — «бумага» */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.7'/%3E%3C/svg%3E");
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ---------- Общие утилиты секций ---------- */
+
+.container {
+  width: min(1160px, 100% - 48px);
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  padding-block: clamp(72px, 10vw, 132px);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-hand);
+  font-size: 1.55rem;
+  line-height: 1;
+  color: var(--accent);
+  transform: rotate(-2deg);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 34px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+.title {
+  margin: 14px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.6vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+}
+
+.section-lead {
+  margin: 18px 0 0;
+  max-width: 56ch;
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
+/* ---------- Кнопки (используются в Header/Hero/Contact) ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.98rem;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  box-shadow: 0 14px 30px -12px var(--accent);
+}
+
+.btn-primary:hover {
+  background: var(--accent-strong);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px -12px var(--accent);
+}
+
+.btn-ghost {
+  border: 1.5px solid var(--line);
+  color: var(--ink);
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ---------- Доступность: уважение к prefers-reduced-motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

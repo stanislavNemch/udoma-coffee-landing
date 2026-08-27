@@ -1,0 +1,148 @@
+/* ============================================================
+   Footer — «двор после заката»: бренд, навигация, контакты
+   ============================================================ */
+
+.footer {
+  position: relative;
+  margin-top: clamp(40px, 6vw, 80px);
+  background: var(--bg-soft);
+  border-top: 1.5px dashed var(--line);
+  padding: clamp(44px, 6vw, 72px) 0 28px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: clamp(32px, 5vw, 64px);
+}
+
+.brandLogo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+}
+
+.brandLogo svg {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.brandName em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.tagline {
+  margin: 16px 0 0;
+  max-width: 32ch;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.handNote {
+  display: inline-block;
+  margin-top: 18px;
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
+  line-height: 1.2;
+  color: var(--accent);
+  transform: rotate(-2deg);
+}
+
+.colTitle {
+  margin: 4px 0 16px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.navLink {
+  display: block;
+  padding: 7px 0;
+  font-weight: 600;
+  transition:
+    color 0.2s ease,
+    transform 0.25s ease;
+}
+
+.navLink:hover {
+  color: var(--accent);
+  transform: translateX(5px);
+}
+
+.contacts {
+  font-style: normal;
+}
+
+.contactLine {
+  display: block;
+  padding: 7px 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+a.contactLine:hover {
+  color: var(--accent);
+}
+
+.bottom {
+  margin-top: clamp(36px, 5vw, 56px);
+  padding-top: 22px;
+  border-top: 1.5px dashed var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.copyright {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.topBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  font-weight: 700;
+  font-size: 0.88rem;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.topBtn:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (max-width: 860px) {
+  .top {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

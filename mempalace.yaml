@@ -1,0 +1,25 @@
+wing: coffee_proj_qwen_3.8_xhigh
+rooms:
+- name: memory_bank
+  description: Files from memory-bank/
+  keywords:
+  - memory_bank
+  - memory-bank
+- name: public
+  description: Files from public/
+  keywords:
+  - public
+  - public
+- name: src
+  description: Files from src/
+  keywords:
+  - src
+  - src
+- name: frontend
+  description: Files from components/
+  keywords:
+  - frontend
+  - components
+- name: general
+  description: Files that don't fit other rooms
+  keywords: []
