@@ -1,5 +1,11 @@
 # U doma Coffee Landing
 
+[![CI](https://github.com/stanislavNemch/udoma-coffee-landing/actions/workflows/ci.yml/badge.svg)](https://github.com/stanislavNemch/udoma-coffee-landing/actions/workflows/ci.yml)
+[![Deploy to GitHub Pages](https://github.com/stanislavNemch/udoma-coffee-landing/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/stanislavNemch/udoma-coffee-landing/actions/workflows/deploy-pages.yml)
+[![Live Website](https://img.shields.io/badge/Live%20Website-Open-2ea44f?logo=github)](https://stanislavnemch.github.io/udoma-coffee-landing/)
+
+Single-page coffee shop landing built with React, TypeScript, and Vite.
+
 [Українська](#ukrainska-versiia) | [English](#english-version)
 
 ---
