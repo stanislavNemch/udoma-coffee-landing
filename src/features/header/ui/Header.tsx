@@ -4,62 +4,7 @@ import styles from "./Header.module.css";
 import { NAV_LINKS } from "../../../shared/constants";
 import type { Theme } from "../../../shared/types";
 import { applyTheme, getInitialTheme, persistTheme } from "../../../shared/lib";
-
-function CupLogo() {
-  return (
-    <svg
-      viewBox="0 0 48 48"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M9 21h22v7a11 11 0 0 1-11 11 11 11 0 0 1-11-11v-7Z" />
-      <path d="M31 24h3.5a4.5 4.5 0 0 1 0 9H31" />
-      <path d="M7 43h26" />
-      <path d="M16 6c-1.8 2.2 1.8 3.4 0 5.6" opacity="0.85" />
-      <path d="M23 6c-1.8 2.2 1.8 3.4 0 5.6" opacity="0.85" />
-    </svg>
-  );
-}
-
-function SunIcon() {
-  return (
-    <svg
-      width="19"
-      height="19"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      aria-hidden="true"
-    >
-      <circle cx="12" cy="12" r="4.2" />
-      <path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19" />
-    </svg>
-  );
-}
-
-function MoonIcon() {
-  return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M20.6 14.2A8.8 8.8 0 0 1 9.8 3.4a8.8 8.8 0 1 0 10.8 10.8Z" />
-    </svg>
-  );
-}
+import { CupLogo, MoonIcon, SunIcon } from "./HeaderIcons";
 
 export default function Header() {
   const [theme, setTheme] = useState<Theme>(getInitialTheme);
