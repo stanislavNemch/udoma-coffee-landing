@@ -287,7 +287,7 @@ export default function Contact() {
                     transition={{ duration: 0.35 }}
                   >
                     <div className={styles.formHead}>
-                      <span className="eyebrow">форма-билет</span>
+                      <span className="eyebrow">форма-квиток</span>
                       <h3 className={styles.formTitle}>Забронювати столик</h3>
                       <p className={styles.formSub}>
                         Залиште контакти — передзвонимо протягом години.

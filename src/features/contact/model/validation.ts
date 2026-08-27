@@ -9,20 +9,20 @@ export function validateField(
 
   switch (field) {
     case "name":
-      if (!value) return "Подскажите имя — как к вам обращаться?";
-      if (value.length < 2) return "Имя — минимум два символа.";
+      if (!value) return "Підкажіть ім'я — як до вас звертатися?";
+      if (value.length < 2) return "Ім'я має містити щонайменше два символи.";
       return undefined;
     case "phone": {
       const digits = value.replace(/\D/g, "");
-      if (!digits) return "Нужен номер, чтобы подтвердить бронь.";
-      if (!/^(?:7|8)\d{10}$/.test(digits)) {
-        return "Похоже, в номере ошибка: +7 и ещё 10 цифр.";
+      if (!digits) return "Потрібен номер, щоб підтвердити бронювання.";
+      if (!/^(?:380\d{9}|0\d{9})$/.test(digits)) {
+        return "Схоже, у номері помилка: введіть +380 і 9 цифр або 0 та 9 цифр.";
       }
       return undefined;
     }
     case "message":
       if (value.length > MESSAGE_LIMIT) {
-        return `Чуть короче — до ${MESSAGE_LIMIT} символов.`;
+        return `Трохи коротше — до ${MESSAGE_LIMIT} символів.`;
       }
       return undefined;
   }
