@@ -14,6 +14,6 @@ export function persistTheme(theme: Theme) {
   try {
     localStorage.setItem(THEME_STORAGE_KEY, theme);
   } catch {
-    /* приватный режим — просто не сохраняем */
+    /* приватний режим — просто не зберігаємо */
   }
 }
