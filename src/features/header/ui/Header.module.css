@@ -160,6 +160,7 @@
   top: 100%;
   left: 0;
   right: 0;
+  z-index: 3;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -168,6 +169,17 @@
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--line);
+}
+
+.mobileBackdrop {
+  position: fixed;
+  inset: 0;
+  top: 76px;
+  z-index: 2;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.14);
 }
 
 .mobileLink {
