@@ -173,12 +173,12 @@
   --ticker-speed: 46s;
   position: relative;
   margin-top: auto;
-  width: 104%;
-  margin-left: -2%;
+  width: 100%;
+  margin-left: 0;
   padding-block: 15px;
   background: var(--accent);
   color: var(--accent-contrast);
-  transform: rotate(-1.2deg) scale(1.01);
+  transform: rotate(-1.2deg);
   overflow: hidden;
 }
 
