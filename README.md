@@ -84,14 +84,6 @@ npm run preview
 - CI: перевірка збірки на кожен push/PR у main
 - Deploy to GitHub Pages: збірка та публікація сайту з dist
 
-Після пушу в main сайт оновлюється автоматично.
-
-### Нотатки по контенту
-
-- Інтерфейс і тексти адаптовано під українську локаль
-- VK замінено на Viber
-- Валюту в меню переведено на грн
-
 ### Roadmap
 
 - Підключити реальний backend/API для форми замість mock-submit
@@ -174,14 +166,6 @@ Two workflows are configured:
 
 - CI: build verification on every push/PR to main
 - Deploy to GitHub Pages: build and publish the dist output
-
-Every push to main triggers an automatic website update.
-
-### Content Notes
-
-- UI copy localized for Ukrainian audience
-- VK replaced by Viber
-- Menu prices switched to UAH format (грн)
 
 ### Roadmap
 
